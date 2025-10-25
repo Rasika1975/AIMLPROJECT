@@ -1,0 +1,6 @@
+pytesseract
+streamlit
+pandas
+openpyxl
+nltk
+spacy

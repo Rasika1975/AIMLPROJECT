@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: document-analyzer
+    env: python
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y tesseract-ocr
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: streamlit run src/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
